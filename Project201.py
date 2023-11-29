@@ -3,12 +3,12 @@ from tkinter import *
 # create a main parent window, tkinter offers a method Tk.
 window=Tk()
 
-window.title('BMI Calculator')
+window.title('Interest Calculator')
 window.geometry("400x400")
 window.configure(bg='lightcyan')
 
 def calculate_interest():
-    #storing what they wrote for their height and their weight in variables then use the bmi formula
+    #storing what they wrote for their height and their weight in variables then use the interest formula
     p=float(principle.get())
     r=float(rate.get())
     t=float(time.get())
@@ -18,18 +18,9 @@ def calculate_interest():
     showLabel.destroy()
     msg=""
     
-    if bmi < 18.5:
-        msg="you areUnderweight"
-    elif bmi > 18.5 and bmi <=24.9:
-      msg="is in Normal Range"
-    elif bmi > 25 and bmi <=29.9:
-      msg="you are Overweight"
-    elif bmi > 30:
-      msg="you are Obese"
-    else:
-      msg="Something Went Wrong"
+  
       
-    output_message= Label(result_frame,text=name+", your BMI is "+str(bmi)+" and "+msg, bg = "lightcyan", font=("Calibri", 12), width=42)
+    output_message= Label(result_frame,text=name+", your Interest is "+str(interest)+" and "+msg, bg = "lightcyan", font=("Calibri", 12), width=42)
     output_message.place(x=20,y=40)
     output_message.pack()
 
