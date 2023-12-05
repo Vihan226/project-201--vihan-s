@@ -14,7 +14,8 @@ def calculate_interest():
     t=float(time.get())
     i=(p*r*t)/100
     interest=round(i,2)
-    
+    name=username.get()
+
     showLabel.destroy()
     msg=""
     
@@ -35,7 +36,26 @@ heading_label.place(x = 50, y = 20)
 username=Entry(window, text = "" , bd = 2, width = 22)
 username.place(x = 150 , y = 92)
 
+name_label=Label(window, text = "Your Name",fg = "black",bg = "lightcyan",font = ("Calibri" , 12), bd = 5)
+name_label.place(x = 50, y = 90)
+#making a block to let the person write their input
+username=Entry(window, text = "" , bd = 2, width = 22)
+username.place(x = 150 , y = 92)
 
+pr=Label(window, text = "Principle",fg = "black",bg = "lightcyan",font = ("Calibri" , 12), bd = 5)
+pr.place(x = 50, y = 140)
+principle=Entry(window, text = "" , bd = 2, width = 15)
+principle.place(x = 200 , y = 142)
+
+ra=Label(window, text = "Principle",fg = "black",bg = "lightcyan",font = ("Calibri" , 12), bd = 5)
+ra.place(x = 50, y = 140)
+rate=Entry(window, text = "" , bd = 2, width = 15)
+rate.place(x = 200 , y = 142)
+
+ti=Label(window, text = "Principle",fg = "black",bg = "lightcyan",font = ("Calibri" , 12), bd = 5)
+ti.place(x = 50, y = 140)
+time=Entry(window, text = "" , bd = 2, width = 15)
+time.place(x = 200 , y = 142)
 
 result_frame = LabelFrame(window,text="Result", bg = "lightcyan", font=("Calibri", 12))
 result_frame.pack(padx=20, pady=20)
